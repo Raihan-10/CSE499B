@@ -217,7 +217,7 @@ for name in check_list:
     fid = original_name_to_final_id(name)
     if fid is not None:
         final_name = FINAL_CLASS_NAMES[fid]
-        print(f"{name:<50} | ✅ {final_name} ({fid})")
+        print(f"{name:<50} | {final_name} ({fid})")
     else:
         print(f"{name:<50} |  UNMAPPED (Will be skipped)")
 
@@ -488,7 +488,7 @@ for filename in os.listdir(MERGED_ANNOTS_DIR):
     except Exception as e:
         print(f"Error checking {filename}: {e}")
 
-print(f"\n✅ Repair Complete. Fixed {repaired_count} files.")
+print(f"\nRepair Complete. Fixed {repaired_count} files.")
 
 label_dir = "Standardized_Annotations"
 removed = 0
@@ -2035,3 +2035,4 @@ if __name__ == "__main__":
     print("="*70 + "\n")
     counter, violations = process_video()
     print("\nDone!")
+
